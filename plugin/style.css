@@ -1,0 +1,74 @@
+body {
+  margin: 0px;
+  padding: 0px;
+  width: 600px;
+  font-family: 'Barlow', sans-serif;
+  overflow: hidden;
+}
+
+.header {
+  padding: 8px;
+  background-color: #FAFAFA;
+}
+
+.footer {
+  height: 32.8px;
+  -webkit-box-shadow: 0 -2px 4px 0 rgba(0, 0, 0, 0.14);
+          box-shadow: 0 -2px 4px 0 rgba(0, 0, 0, 0.14);
+  font-size: 14px;
+  font-weight: 500;
+  text-align: center;
+  color: #656565;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center; }
+  .footer a:link {
+    color: #5882FA; }
+  .footer a:visited {
+    color: #5882FA; }
+  .footer a:hover {
+    color: #5882FA; }
+  .footer a:active {
+    color: #5882FA; }
+
+#div_btn {
+  text-align: center;
+}
+
+#cnt {
+  text-align: center;
+}
+
+#entry {
+  padding-top: 40px;
+  padding-bottom: 20px;
+}
+
+.text {
+  font-style: italic;
+  /* font-family: 'PT Sans', sans-serif; */
+  /* background-color: #E0E0F8; */
+  background-color: #A9BCF5;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  color: #ffffff;
+  margin-left: 6px;
+  /* margin-right: 3px; */
+}
+
+.starR{
+  background: url('http://miuu227.godohosting.com/images/icon/ico_review.png') no-repeat right 0;
+  background-size: auto 100%;
+  width: 30px;
+  height: 30px;
+  display: inline-block;
+  text-indent: -9999px;
+  cursor: pointer;
+}
+.starR.on{background-position:0 0;}

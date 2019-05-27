@@ -1,30 +1,27 @@
 <!DOCTYPE html>
 <html>
-<!--
-<script
-  src="https://code.jquery.com/jquery-3.4.1.js"
-  integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
-  crossorigin="anonymous"></script>
-<script src="http://code.jquery.com/jquery-latest.js"></script>
--->
     <head>
         <title>Text summary</title>
        <!-- <script integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script> -->
         <script src="jquery-3.1.0.min.js"></script>
        <script src="popup.js"></script>
        <script src="eventPage.js"></script>
+       <link rel="stylesheet" type="text/css" href="style.css?ver=111">
+       <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+       <link href="https://fonts.googleapis.com/css?family=PT+Sans&display=swap" rel="stylesheet">
        <style>
-           div {
-               color : white;
+           /* div { */
+               /* color : white;
                background-color: skyblue;
-               border:0px solid white;
-           }
+               border:0px solid white; */
+           /* } */
             @import url(//fonts.googleapis.com/earlyaccess/jejugothic.css);
             #article, #summary {
-                font-size : 20px;
+                /* font-size : 20px; */
+                font-size : 15px;
                 padding: 5px;
                 margin: 3px;
-                border-radius:10px 10px 10px 10px;
+                /* border-radius:10px 10px 10px 10px; */
             }
             #content{
                 display:flex;
@@ -33,7 +30,7 @@
             h3 {
                 font-size: 19px;
             }
-            input[type=button]{
+            /* input[type=button]{
             background:skyblue;
 
             border:2px solid white;
@@ -43,40 +40,54 @@
             color : white;
             width:100px;
             height:30px;
-            }
+            } */
             </style>
     </head>
 
-    <body bgcolor = skyblue>
+    <!-- <body bgcolor = skyblue> -->
+    <body>
+        <div class="header" style="text-decoration: underline">
+            <div>
+                <img class="logoImg" src="sh_logo.png" style="width:150px;">
+            </div>
+        </div>
         <div id = "entry">
-            <div id = "header">
+            <!-- <div id = "header">
                 <h1>
                     Summary Help !! <img align = "right", src = 'iconWHITE.PNG'>
-                </h1>
-                
-            </div>
-            <div id = "content">
-                <div id = "originalText">
-                    <h3>Original Text</h3>
-                    <form id="textForm" name="textForm">
-                    <div id="result"></div>
-                    <textarea name="article" id="article" cols="30" rows="15" style="color:black; FONT-FAMILY:Arial;"></textarea>
-                    
-                </div>
-                <div id = "summaryText">
+                </h1>     
+            </div> -->
+            <div id = "content cnt" style="text-align: center;">
+                <form id="textForm" name="textForm">
+                    <div id = "originalText" style="display: inline-block;margin-right: 10px;">
+                        <h3 class="text">Original</h3>
+                        <!-- <form id="textForm" name="textForm"> -->
+                        <div id="result"></div>
+                        <textarea name="article" id="article" cols="36" rows="10" class="form-control"></textarea>
+                    </div>
+                <div id = "summaryText" style="display: inline-block;margin-right: 5px;">
                     <!--서머리 버튼을 누르면, 옆 텍스트에어리어에 서머리된 내용을 가지고 온다.-->
-                    <h3>Summary Text</h3>
-                    <textarea id="summary" type="text" name = "summary-ajax" cols = "30" rows ="15" style="color:blue; FONT-FAMILY:Arial;"></textarea>
+                    <h3 class="text">Result</h3>
+                    <textarea id="summary" type="text" name = "summary-ajax" cols = "36" rows ="10" class="form-control"></textarea>
+                </div>
+                <div style="width:130px;text-align: center;display: inline-block;margin-top: 10px;">
+                    <input type="button" id="submit" name="submit" value="Summary" class="btn btn-outline-primary btn-block" style="border-color:#5882FA;"/>
                 </div>
             </div>
-            <div> <center>
+            <!-- <div> <center>
                     <input type="button" id="submit" name="submit" value="summary !!" />
                 </center>
-            </div>
+            </div> -->
             <div id="evaluate"></div>
         </form>
         </div>
-        
+
+        <div class="footer">
+            <div>
+                Is there any problem? Please click
+                <a href="https://forms.gle/J4knJ8CZGgb7XDdKA" target="_blank">Here</a>
+            </div>
+        </div>   
     </body>
 
 </html>

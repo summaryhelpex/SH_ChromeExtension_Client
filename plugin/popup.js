@@ -7,6 +7,7 @@ $(function(){
     $('#submit').click(function () {
         // form 태그 안에 들어있는 text들을 server에 보내기 위해서, 해당 text를 변환해준다.
         var queryString = $('#textForm').serialize();
+        console.log(queryString);
         // 그 text를 url로 보내고, 평가 항목을 표시하고, 평가를 실시하게 한다.
         $.ajax({
             url:'http://13.209.8.253/summary_ajax/',
@@ -24,16 +25,14 @@ $(function(){
                 
                 //평가 항목 html을 추가하고, click 이벤트를 넣어서 평가를 서버에 보내는게 한다.
                 $('#evaluate').load('evaluate.html',function(){
-                    
+                    $('.starRev span').click(function(){
+                        $(this).parent().children('span').removeClass('on');
+                        $(this).addClass('on').prevAll('span').addClass('on');
+                        return false;
+                      });
                     $('#eval').click(function () {
-
-                        $('.starRev span').click(function(){
-                            $(this).parent().children('span').removeClass('on');
-                            $(this).addClass('on').prevAll('span').addClass('on');
-                            return false;
-                          });
-                          
-                        var evalValue = $('#evalForm').serialize();
+                        var evalValue = "eval" + $('.starR.on').length;
+                        console.log(evalValue);
                         //서버에 평가한 것을 보낸다.
                         $.ajax({
                             url: 'http://13.209.8.253/summary_ajax/',

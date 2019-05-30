@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 
 <html>
@@ -42,11 +43,8 @@
             }
             /* input[type=button]{
             background:skyblue;
-
             border:2px solid white;
-
             border-radius:10px 10px 10px 10px;
-
             color : white;
             width:100px;
             height:30px;
@@ -74,29 +72,32 @@
                         <!-- <form id="textForm" name="textForm"> -->
                         <div id="result"></div>
                         <textarea name="article" id="article" cols="36" rows="10" class="form-control"></textarea>
-                        <input type="button" id="submit" name="submit" value="Summary" class="btn btn-outline-primary btn-block" style="border-color:#5882FA;"/>
                     </div>
-                </form>
-
-                    <div id = "summaryText" style="display: inline-block;margin-right: 5px;">
+                <div id = "summaryText" style="display: inline-block;margin-right: 5px;">
                     <!--서머리 버튼을 누르면, 옆 텍스트에어리어에 서머리된 내용을 가지고 온다.-->
                     <h3 class="text">Result</h3>
-                    <textarea id="summary" type="text" name = "summary-ajax" cols = "36" rows ="10" class="form-control"></textarea>
+                    <textarea id="summary" type="text" cols = "36" rows ="10" class="form-control"></textarea>
                 </div>
-                <!--
-                    <img src="sh_icon.png" height="512" width="512"/>
-                    <div style="width:130px;text-align: center;display: inline-block;margin-top: 10px;">
--->
+                <div style="width:130px;text-align: center;display: inline-block;margin-top: 10px;">
+                    <input type="button" id="submit" name="submit" value="Summary" class="btn btn-outline-primary btn-block" style="border-color:#5882FA;"/>
                 </div>
             </div>
             <!-- <div> <center>
                     <input type="button" id="submit" name="submit" value="summary !!" />
                 </center>
             </div> -->
+        </form>
+
             <div id="evaluate"></div>
 
+        </div>
 
+        <div class="footer">
+            <div>
+                Is there any problem? Please click
+                <a href="https://forms.gle/J4knJ8CZGgb7XDdKA" target="_blank">Here</a>
+            </div>
+        </div>
 
     </body>
-
 </html>

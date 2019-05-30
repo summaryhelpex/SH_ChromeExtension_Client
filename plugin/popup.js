@@ -14,8 +14,7 @@ $(document).ready(function(){
         alert(queryString);
         // 그 text를 url로 보내고, 평가 항목을 표시하고, 평가를 실시하게 한다.
         $.ajax({
-            url : 'http://127.0.0.1:8000/summary_ajax/',
-            //url:'http://13.209.8.253/summary_ajax/',
+            url:'http://13.209.8.253/summary_ajax/',
             data: queryString,
             dataType:'json',
             type:'POST',
@@ -38,7 +37,7 @@ $(document).ready(function(){
                                 var evalValue = $('#score').serialize();
                                 alert(evalValue);
                                 $.ajax({
-                                    url: 'http://127.0.0.1:8000/eval_ajax/',
+                                    url: 'http://13.209.8.253/eval_ajax/',
                                     data: evalValue,
                                     dataType: 'json',
                                     type: 'POST',

@@ -1,19 +1,17 @@
 var menuItem = {
-    "id": "selectText2",
-    "title": "SelectText",
+    "id": "selectText",
+    "title": "Summary Help",
     "contexts": ["selection"]
 };
 // 우클릭시 우리 메뉴가 나타나게 한다.
-chrome.contextMenus.removeAll(function(){
-    chrome.contextMenus.create(menuItem);
-});
+chrome.contextMenus.create(menuItem);
 
 //드레그 후 우리의 메뉴를 클릭했을 때, 해당 text를 storage에 저장한다.
-chrome.contextMenus.onClicked.addListener(function(clickData){   
-    if (clickData.menuItemId == "selectText" && clickData.selectionText){            
+chrome.contextMenus.onClicked.addListener(function(clickData){
+    if (clickData.menuItemId == "selectText" && clickData.selectionText){
         var newTotal = "";
         newTotal += clickData.selectionText;
-        chrome.storage.sync.set({'total': newTotal}, function(){               
+        chrome.storage.sync.set({'total': newTotal}, function(){
         });
     }
 });

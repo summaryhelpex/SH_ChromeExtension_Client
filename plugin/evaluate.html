@@ -1,10 +1,9 @@
 <!DOCTYPE html>
 <html lang="ko">
-
-<!--<script src="jquery-3.1.0.min.js"></script>-->
 <head>
         <script src="eventPage.js"></script>
         <script src="popup.js"></script>
+        <link rel="stylesheet" type="text/css" href="style.css">
     <style>
         .starR{
             background: url('http://miuu227.godohosting.com/images/icon/ico_review.png') no-repeat right 0;
@@ -18,37 +17,29 @@
     </style>
 </head>
 <body>
-
         <!-- 별점 -->
-        <div style="margin-top:20px;width:600px;height:50px;text-align: center;">
-                <form method="post" name="score" id="score">
-                    <div style="display: inline-block;text-align: center;margin-right:10px;">
-                        <p style="color: #848484;margin:0;">Are you satisfied with the result?</p>
-                        <p style="color: #848484;margin:0;">Then leave a star!</p>
-                    </div>
-                    <div id="star_rating" style="display: inline-block;vertical-align: 15px;"></div>
-                </form>
-            </div>
+        <div id="rating">
+            <form method="post" name="score" id="score">
+                <div id="rating_text">
+                    <p>Are you satisfied with the result?</p>
+                    <p>Then leave a star!</p>
+                </div>
+                <div id="star_rating"></div>
+            </form>
         </div>
 
-    <!-- <form method="post" name="eavlForm">
+        <!-- <form method="post" name="eavlForm">
         <h2>더 나은 프로그램을 위해 평가해주세요!</h2>
-
             <input type="radio" name="evaluate" id="eval1" value="1">
             <label for="eval1"><strong><font size="3">★</font></strong></label>
-
             <input type="radio" name="evaluate" id="eval2" value="2">
             <label for="eval2"><strong><font size="3">★★</font></strong></label>
-
             <input type="radio" name="evaluate" id="eval3" value="3">
             <label for="eval3"><strong><font size="3">★★★</font></strong></label>
-
             <input type="radio" name="evaluate" id="eval4" value="4">
             <label for="eval4"><strong><font size="3">★★★★</font></strong></label>
-
             <input type="radio" name="evaluate" id="eval5" value="5">
             <label for="eval5"><strong><font size="3">★★★★★</font></strong></label>
-
             <input type="button" name="eval" id="eval" value="평가하기">
             <div id="thank"></div> -->
 
@@ -63,7 +54,6 @@
                     <span class="starR">별8</span>
                     <span class="starR">별9</span>
                     <span class="starR">별10</span>
-
             </div>
             <div align = "left">
                 <p></p>
@@ -71,6 +61,5 @@
             </div> -->
 
     <!-- </form>  -->
-
 </body>
 </html>

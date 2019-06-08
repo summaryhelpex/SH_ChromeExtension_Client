@@ -8,7 +8,6 @@ $(document).ready(function(){
 
     $('#submit').click(function () {
 
-
         // form 태그 안에 들어있는 text들을 server에 보내기 위해서, 해당 text를 변환해준다.
         var queryString = $('#textForm').serialize();
         alert(queryString);
@@ -44,6 +43,9 @@ $(document).ready(function(){
                                     success: function(data){
                                         var evaluate = data['score'];
                                         alert(evaluate +'  thank you for your evaluation');
+                                        //별점 초기화
+                                        $('#star_rating').raty('cancel');
+                                        $('#rating').slideToggle('fast');
                                     }
                                     , error: function (request) {
                                         alert('error')
@@ -53,7 +55,9 @@ $(document).ready(function(){
                                 //이 작업이 끝나면 textarea를 모두 초기화 시킨다.
                                 $('#article').val(" ");
                                 $('#summary').val(" ");
-
+                                //storage,browserAction 초기화
+                                chrome.storage.sync.clear();
+                                chrome.browserAction.setBadgeText({"text": ''});
                             }
 
 

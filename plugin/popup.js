@@ -10,7 +10,6 @@ $(document).ready(function(){
 
         // form 태그 안에 들어있는 text들을 server에 보내기 위해서, 해당 text를 변환해준다.
         var queryString = $('#textForm').serialize();
-        alert(queryString);
         // 그 text를 url로 보내고, 평가 항목을 표시하고, 평가를 실시하게 한다.
         $.ajax({
             url:'http://13.209.8.253/summary_ajax/',
@@ -34,7 +33,6 @@ $(document).ready(function(){
                                 //별점 값 textarea에 표시
                                 var test = $('#star_rating').raty('score');
                                 var evalValue = $('#score').serialize();
-                                alert(evalValue);
                                 $.ajax({
                                     url: 'http://13.209.8.253/eval_ajax/',
                                     data: evalValue,
